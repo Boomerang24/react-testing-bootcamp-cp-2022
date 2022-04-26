@@ -17,9 +17,28 @@
   text-decoration: underline;
 }
 
-.date-picker {
-  align-items: center;
+.react-date-picker__styles {
+  background-color: #61dafb;
+  border-radius: 5em;
+  padding: 0 0.3em;
+  width: 8.5em;
+}
+
+.react-date-picker__wrapper {
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: none
+}
+.react-date-picker__inputGroup__divider {
+  padding: 1px 0;
+  white-space: pre;
+  color: black
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 23px;
 }
 
 .main-wrapper {
