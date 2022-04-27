@@ -1,9 +1,15 @@
+body {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
+  max-width: 95rem;
+  margin: auto;
+  padding: 0 2em;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,28 +23,11 @@
   text-decoration: underline;
 }
 
-.react-date-picker__styles {
-  background-color: #61dafb;
-  border-radius: 5em;
-  padding: 0 0.3em;
-  width: 8.5em;
-}
-
-.react-date-picker__wrapper {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  border: none
-}
-.react-date-picker__inputGroup__divider {
-  padding: 1px 0;
-  white-space: pre;
-  color: black
-}
-
-.react-calendar__navigation {
-  display: flex;
-  height: 23px;
+.picture-information-calendar {
+  background-color: #42b6d6;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .main-wrapper {
@@ -47,24 +36,28 @@
 
 .main-sections {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-height: 25em;
+  grid-template-columns: repeat(1, 1fr);
   text-align: center;
 }
 
 .picture-description {
-  display: flex;
   align-items: flex-end;
-  font-size: 0.83em;
-  padding: 0 1em;
-  text-align: start;
+  color: rgb(138, 138, 138);
+  display: flex;
+  font-size: 1rem;
+  margin-top: -1rem;
+  text-align: start;  
+}
+
+.picture-description:hover {
+  color: whitesmoke
 }
 
 .picture-information {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 1em;
+  /* max-width: 100%; */
 }
 
 .picture-information p {
@@ -78,17 +71,15 @@
   background-color: black;
   border-radius: 7px;
   height: 16em;
-  max-width: 27.5em;
+  width: 100%;
 }
 
 .picture-container img {
   height: 16em;
   object-fit: contain;
-  max-width: 27.5em;
 }
 
 .mainscreen-footer {
   font-size: 0.9em;
   font-style: italic;
-  padding: 1em;
 }

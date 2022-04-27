@@ -1,16 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
-import DatePicker from 'react-date-picker';
+import moment from 'moment';
 
-import 'react-calendar/dist/Calendar.css';
 import './App.css';
 
-const testImg = 'https://apod.nasa.gov/apod/image/2204/PlanetParadeSydney_Agrawal_960_ann.jpg';
+const testImg = 'https://apod.nasa.gov/apod/image/2204/PlanetParadeSydney_Agrawal_1663.jpg';
 
 function App() {
-  const [value, onChange] = useState(new Date());
+  const today = moment(new Date()).format('YYYY-MM-DD');
+  const [dateState, setDateState] = useState(today);
 
-  console.log(value);
+  const handleChangeDate = (e) => {
+    const newDate = e.target.value;
+    setDateState(newDate);
+  };
 
   return (
     <>
@@ -18,11 +21,19 @@ function App() {
         <header className="App-header">
           <h1>Picture of the Day</h1>
           <div className="main-wrapper">
-            <DatePicker className="react-date-picker__styles" onChange={onChange} value={value} />
+            <input
+              className="picture-information-calendar"
+              type="date"
+              id="start"
+              name="trip-start"
+              value={dateState}
+              onChange={(e) => handleChangeDate(e)}
+              min="2018-01-01"
+              max={today}
+            />
             <div className="main-sections">
               <div className="picture-information">
                 <h3>Planet Parade over Sydney Opera House</h3>
-                <p>2022-04-26</p>
                 <div className="picture-container">
                   {/* <img src="/testImg.jpg" alt="img" /> */}
                   <img src={testImg} alt="img" />
