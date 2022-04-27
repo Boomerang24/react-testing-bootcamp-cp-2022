@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-export const MediaContainer = ({ mediaSource, alt }) => {
+const MediaContainer = ({ mediaSource, alt, mediaType }) => {
   const [zoomImg, setZoomImg] = useState(false);
 
   const handleImgClick = () => {
@@ -12,7 +12,13 @@ export const MediaContainer = ({ mediaSource, alt }) => {
 
   return (
     <div className="picture-container">
-      <img className={isImgZoomed} src={mediaSource} alt={alt} onClick={handleImgClick} />
+      {mediaType === 'image' ? (
+        <img className={isImgZoomed} src={mediaSource} alt={alt} onClick={handleImgClick} />
+      ) : (
+        <iframe className="picture" src={mediaSource} />
+      )}
     </div>
   );
 };
+
+export default MediaContainer;
