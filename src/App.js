@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { useState } from 'react';
 import moment from 'moment';
 
@@ -10,6 +9,7 @@ import Footer from './components/Footer';
 import { useFetch } from './hooks/useFetch';
 
 import './App.css';
+import { Triangle } from 'react-loader-spinner';
 
 function App() {
   const today = moment(new Date()).format('YYYY-MM-DD');
@@ -24,21 +24,24 @@ function App() {
     setDateState(newDate);
   };
 
-  if (loading) return <div>Carganding</div>;
+  if (loading)
+    return (
+      <div className="screen-loader">
+        <Triangle height="150" width="150" color="red" ariaLabel="loading" />
+      </div>
+    );
 
   return (
-    <>
-      <div className="App">
-        <header className="App-header">
-          <h3>NASA - Picture of the Day</h3>
-          <div className="main-wrapper">
-            <DatePicker date={dateState} handleChangeDate={handleChangeDate} maxDate={today} />
-            <PictureOfTheDay todaysInfo={response} />
-            <Footer />
-          </div>
-        </header>
-      </div>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <h3>NASA - Picture of the Day</h3>
+        <div className="main-wrapper">
+          <DatePicker date={dateState} handleChangeDate={handleChangeDate} maxDate={today} />
+          <PictureOfTheDay todaysInfo={response} />
+          <Footer />
+        </div>
+      </header>
+    </div>
   );
 }
 export default App;
