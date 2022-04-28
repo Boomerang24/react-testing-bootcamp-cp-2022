@@ -15,7 +15,7 @@ const MediaContainer = ({ mediaSource, alt, mediaType }) => {
       {mediaType === 'image' ? (
         <img className={isImgZoomed} src={mediaSource} alt={alt} onClick={handleImgClick} />
       ) : (
-        <iframe className="picture" src={mediaSource} />
+        <iframe title={`Video - ${alt}`} className="picture" src={mediaSource} />
       )}
     </div>
   );

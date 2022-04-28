@@ -8,8 +8,6 @@ if (!process.env.NODE_ENV === 'development') {
   worker.start({ onUnhandledRequest: 'bypass' }); // Resolves/ByPasses unhandled requests in browser console
 }
 
-console.log(process.env.NODE_ENV);
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

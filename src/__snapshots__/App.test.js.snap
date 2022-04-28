@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Tests should render "loading" component correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="screen-loader"
+        data-testid="triangle-loading"
+        role="presentation"
+        style="display: flex;"
+      >
+        <svg
+          aria-label="loading"
+          class="sc-gKXOVf RDHOs"
+          data-testid="triangle-svg"
+          height="150"
+          id="triangle"
+          viewBox="-3 -4 39 39"
+          width="150"
+        >
+          <polygon
+            class="sc-jSMfEi ddtSqb"
+            fill="transparent"
+            points="16,0 32,32 0,32"
+            stroke="red"
+            stroke-width="1"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="screen-loader"
+      data-testid="triangle-loading"
+      role="presentation"
+      style="display: flex;"
+    >
+      <svg
+        aria-label="loading"
+        class="sc-gKXOVf RDHOs"
+        data-testid="triangle-svg"
+        height="150"
+        id="triangle"
+        viewBox="-3 -4 39 39"
+        width="150"
+      >
+        <polygon
+          class="sc-jSMfEi ddtSqb"
+          fill="transparent"
+          points="16,0 32,32 0,32"
+          stroke="red"
+          stroke-width="1"
+        />
+      </svg>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`App Tests should render "mainscreen" component correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <header
+          class="App-header"
+        >
+          <div
+            class="Toastify"
+          />
+          <h3>
+            NASA - Picture of the Day
+          </h3>
+          <div
+            class="main-wrapper"
+          >
+            <input
+              aria-label="calendar-picker"
+              class="picture-information-calendar"
+              id="calendarPicker"
+              max="2022-04-28"
+              name="date-picker"
+              type="date"
+              value="2022-04-28"
+            />
+            <div
+              class="main-sections"
+            >
+              <div
+                class="picture-information"
+              >
+                <h3>
+                  Animation: Odd Radio Circles
+                </h3>
+                <div
+                  class="picture-container"
+                >
+                  <iframe
+                    class="picture"
+                    src="https://www.youtube.com/embed/m8qvOpcDt1o?rel=0"
+                    title="Video - Animation: Odd Radio Circles"
+                  />
+                </div>
+              </div>
+              <div
+                class="picture-description"
+              >
+                <p>
+                  Sample Explanation
+                </p>
+              </div>
+            </div>
+            <div
+              class="mainscreen-footer"
+            >
+              <p>
+                Project created during Wizeline Academy React Testing Bootcamp
+              </p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <header
+        class="App-header"
+      >
+        <div
+          class="Toastify"
+        />
+        <h3>
+          NASA - Picture of the Day
+        </h3>
+        <div
+          class="main-wrapper"
+        >
+          <input
+            aria-label="calendar-picker"
+            class="picture-information-calendar"
+            id="calendarPicker"
+            max="2022-04-28"
+            name="date-picker"
+            type="date"
+            value="2022-04-28"
+          />
+          <div
+            class="main-sections"
+          >
+            <div
+              class="picture-information"
+            >
+              <h3>
+                Animation: Odd Radio Circles
+              </h3>
+              <div
+                class="picture-container"
+              >
+                <iframe
+                  class="picture"
+                  src="https://www.youtube.com/embed/m8qvOpcDt1o?rel=0"
+                  title="Video - Animation: Odd Radio Circles"
+                />
+              </div>
+            </div>
+            <div
+              class="picture-description"
+            >
+              <p>
+                Sample Explanation
+              </p>
+            </div>
+          </div>
+          <div
+            class="mainscreen-footer"
+          >
+            <p>
+              Project created during Wizeline Academy React Testing Bootcamp
+            </p>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
