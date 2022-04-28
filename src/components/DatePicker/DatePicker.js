@@ -4,8 +4,9 @@ const DatePicker = ({ date, handleChangeDate, maxDate }) => {
     <input
       className="picture-information-calendar"
       type="date"
-      id="start"
-      name="trip-start"
+      id="calendarPicker"
+      name="date-picker"
+      aria-label="calendar-picker"
       value={date}
       onChange={handleChangeDate}
       max={maxDate}

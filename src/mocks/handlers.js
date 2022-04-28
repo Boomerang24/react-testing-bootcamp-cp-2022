@@ -16,6 +16,10 @@ export const handlers = [
         })
       );
 
+    if (res.status !== 200) {
+      return res(ctx.json({ message: 'There was an error, please try again' }), ctx.status(500));
+    }
+
     return res(
       ctx.status(200),
       ctx.json({
