@@ -43,17 +43,18 @@ function App() {
       />
     );
 
-  {
-    response && (
-      <Triangle
-        wrapperClass="screen-loader"
-        height="150"
-        width="150"
-        color="red"
-        ariaLabel="loading"
-      />
-    );
-  }
+  //TODO: display error from failed fetch
+  // {
+  //   response && (
+  //     <Triangle
+  //       wrapperClass="screen-loader"
+  //       height="150"
+  //       width="150"
+  //       color="red"
+  //       ariaLabel="loading"
+  //     />
+  //   );
+  // }
 
   // console.log(response.code);
   // return (
