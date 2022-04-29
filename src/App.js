@@ -17,8 +17,8 @@ function App() {
   const today = moment(new Date()).format('YYYY-MM-DD');
   const [dateState, setDateState] = useState(today);
 
-  // const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateState}`;
-  const url = 'https://api.nasa.gov/planetary/apod??'; // URL para forzar error
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateState}`;
+  // const url = 'https://api.nasa.gov/planetary/apod??'; // URL para forzar error
 
   useEffect(() => {
     if (moment(dateState).isAfter(today))
