@@ -7,11 +7,11 @@ import App from './App';
 
 const setup = () => render(<App />);
 
-const failedResponse = {
-  code: 500,
-  msg: 'There was an error, please try again',
-  service_version: 'v1',
-};
+// const failedResponse = {
+//   code: 400,
+//   msg: 'There was an error, please try again',
+//   service_version: 'v1',
+// };
 
 jest.mock('./hooks/useFetch', () => ({
   useFetch: jest.fn(),

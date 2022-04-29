@@ -17,15 +17,14 @@ function App() {
   const today = moment(new Date()).format('YYYY-MM-DD');
   const [dateState, setDateState] = useState(today);
 
-  // const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateState}`;
-  const url =
-    'https://api.nasa.gov/planetary/apod?api_key=pQdaH66O2sQEEvw0wRbYd3nI3NxzR5ZCvT5AEcVS&?';
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateState}`;
+
+  const { response, loading, error } = useFetch(url);
 
   useEffect(() => {
     if (moment(dateState).isAfter(today)) return toast('Future dates are not valid');
+    if (error) toast('There was an error, please try again');
   }, [dateState]);
-
-  const { response, loading } = useFetch(url);
 
   const handleChangeDate = (e) => {
     const newDate = e.target.value;
@@ -43,29 +42,13 @@ function App() {
       />
     );
 
-  //TODO: display error from failed fetch
-  // {
-  //   response && (
-  //     <Triangle
-  //       wrapperClass="screen-loader"
-  //       height="150"
-  //       width="150"
-  //       color="red"
-  //       ariaLabel="loading"
-  //     />
-  //   );
-  // }
-
-  // console.log(response.code);
-  // return (
-  //   <Triangle
-  //     wrapperClass="screen-loader"
-  //     height="150"
-  //     width="150"
-  //     color="red"
-  //     ariaLabel="loading"
-  //   />
-  // );
+  if (!error) {
+    return (
+      <>
+        <ToastContainer />
+      </>
+    );
+  }
 
   return (
     <div className="App">
