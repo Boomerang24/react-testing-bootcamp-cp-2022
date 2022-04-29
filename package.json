@@ -49,5 +49,11 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/mocks",
+      "<rootDir>/src/index.js"
+    ]
   }
 }

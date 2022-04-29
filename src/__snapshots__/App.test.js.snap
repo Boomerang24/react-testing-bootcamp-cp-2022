@@ -135,10 +135,10 @@ Object {
               aria-label="calendar-picker"
               class="picture-information-calendar"
               id="calendarPicker"
-              max="2022-04-28"
+              max="2022-04-29"
               name="date-picker"
               type="date"
-              value="2022-04-28"
+              value="2022-04-29"
             />
             <div
               class="main-sections"
@@ -199,10 +199,10 @@ Object {
             aria-label="calendar-picker"
             class="picture-information-calendar"
             id="calendarPicker"
-            max="2022-04-28"
+            max="2022-04-29"
             name="date-picker"
             type="date"
-            value="2022-04-28"
+            value="2022-04-29"
           />
           <div
             class="main-sections"

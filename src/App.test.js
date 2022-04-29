@@ -7,11 +7,10 @@ import App from './App';
 
 const setup = () => render(<App />);
 
-// const failedResponse = {
-//   code: 400,
-//   msg: 'There was an error, please try again',
-//   service_version: 'v1',
-// };
+const failedResponse = {
+  code: 'API_KEY_MISSING',
+  message: 'No api_key was supplied. Get one at https://api.nasa.gov:443',
+};
 
 jest.mock('./hooks/useFetch', () => ({
   useFetch: jest.fn(),
@@ -61,11 +60,16 @@ describe('App Tests', () => {
   });
   it('should display "Future dates are not valid"', async () => {
     const tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
-
     useFetch.mockImplementation(() => ({
-      response: sampleTodaysInfo,
+      response: null,
       loading: false,
+      error: {
+        code: 400,
+        msg: `Date must be between Jun 16, 1995 and Apr 29, 2022.`,
+        service_version: 'v1',
+      },
     }));
+
     setup();
     const DatePicker = await screen.getByLabelText('calendar-picker');
 
@@ -74,12 +78,14 @@ describe('App Tests', () => {
     expect(await screen.findByText('Future dates are not valid')).toBeInTheDocument();
   });
 
-  //TODO: Pending validate server error
-  // it('should return "There was an error, please try again" when failing to fetch', async () => {
-  //   useFetch.mockImplementation(() => ({
-  //     response: failedResponse,
-  //     loading: false,
-  //   }));
-  //   setup();
-  // });
+  it('should return "There was an error, please try again" when failing to fetch', async () => {
+    useFetch.mockImplementation(() => ({
+      response: null,
+      loading: false,
+      error: failedResponse,
+    }));
+    setup();
+
+    expect(await screen.findByText('There was an error, please try again')).toBeInTheDocument();
+  });
 });
